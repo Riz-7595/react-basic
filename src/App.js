@@ -3,11 +3,16 @@ import { Header } from './components/Header';
 
 function App() {
 
-  const city = "Lahore";
+  const address = {
+    unit: 805,
+    street: 7,
+    city: "Lahore",
+    permanent: false
+  }
 
   return (
     <div>
-      <Header city={city}/>
+      <Header address={address}/>
     </div>
   );
 }

@@ -6,7 +6,7 @@ const Header = (props) => {
       <h1 className="text-3xl font-bold underline">
         Hello World!
       </h1>
-      <Footer city={props.city}>
+      <Footer address={props.address} hobby={'coding'}>
         Rizwan
       </Footer>
     </div>
@@ -16,17 +16,21 @@ const Header = (props) => {
 const Footer = (props) => {
   console.log('Hello')
 
-  const o = false;
+  // const address  =  props.address;
+  // const children = props.children;
+  // const hobby = props.hobby;
 
+  const { children, hobby } = props;
+
+  const { city:myCity, permanent } = props.address;
+
+  console.log('address', props)
 
     return (
     <div>
-      <p>My name is {props.children}.</p>
-      <p>I live in {props.city}.</p>
-      {
-        o ? 'ABC' : 'XYZ'
-      }
-
+      <p>My name is {children}.</p>
+      <p>I { permanent ? '' : 'temporarily'} live in {myCity}.</p>
+      <p>I like {hobby}.</p>
     </div>
 
   )
