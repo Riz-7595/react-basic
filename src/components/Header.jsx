@@ -1,9 +1,10 @@
 import React from 'react'
 
 const Header = (props) => {
+  const { className } = props
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
+      <h1 className={`text-3xl font-bold underline p-2 bg-blue-100 flex justify-center items-center ${className}`}>
         Hello World!
       </h1>
       <Footer address={props.address} hobby={'coding'}>
@@ -14,11 +15,8 @@ const Header = (props) => {
 }
 
 const Footer = (props) => {
+  
   console.log('Hello')
-
-  // const address  =  props.address;
-  // const children = props.children;
-  // const hobby = props.hobby;
 
   const { children, hobby } = props;
 
@@ -32,7 +30,6 @@ const Footer = (props) => {
       <p>I { permanent ? '' : 'temporarily'} live in {myCity}.</p>
       <p>I like {hobby}.</p>
     </div>
-
   )
 }
 

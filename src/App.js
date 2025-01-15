@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      <Header address={address}/>
+      <Header address={address} className='text-blue-500'/>
     </div>
   );
 }
