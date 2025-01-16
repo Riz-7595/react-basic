@@ -1,10 +1,11 @@
 import React from "react";
+import ArrayMethods from "./ArrayMethods";
 
-const Footer = (props) => {
+const Body = (props) => {
   
     console.log('Hello')
   
-    const { children, hobby } = props;
+    const { children } = props;
   
     const { area:location, permanent } = props.address;
   
@@ -14,9 +15,9 @@ const Footer = (props) => {
       <div>
         <p>My name is {children}.</p>
         <p>I am { permanent ? '' : 'currently'} a resident of {location}.</p>
-        <p>I like {hobby}.</p>
+        <ArrayMethods/>
       </div>
     )
   }
 
-  export default Footer
+  export default Body

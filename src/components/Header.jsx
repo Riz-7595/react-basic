@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from './Footer'
+import Body from './Body'
 
 const Header = (props) => {
   const { className } = props
@@ -9,9 +9,9 @@ const Header = (props) => {
       <h1 className={`text-3xl font-bold underline p-2 bg-blue-100 flex justify-center items-center ${className}`}>
         Hello World!
       </h1>
-      <Footer address={props.address} hobby={'coding'}>
+      <Body address={props.address}>
         {firstName} {lastName}
-      </Footer>
+      </Body>
     </div>
   )
 }

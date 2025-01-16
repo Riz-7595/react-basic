@@ -4,7 +4,7 @@ function App() {
 
   const address = {
     postalCode: 55150,
-    area: "Sher Shah Colony, Lahore",
+    area: "SherShah Colony, Lahore",
     permanent: false
   }
 
