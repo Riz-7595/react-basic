@@ -1,10 +1,11 @@
 import React from 'react'
 
 const ArrayMethods = () => {
+  let k=0;
   const langs = ['C++ ', 'Python '];
   const nonLangs = ['HTML ', 'CSS '];
   const updatedLangs = [...langs,...nonLangs,'JavaScript '];
-  const langsList = updatedLangs.map(items => <p>{items}</p>)
+  const langsList = updatedLangs.map(items => <p key={k++}>{items}</p>)
   const [,,...webLangs  ] = updatedLangs;
   return (
     <div>
