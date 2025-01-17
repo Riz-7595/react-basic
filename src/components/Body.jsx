@@ -1,6 +1,5 @@
 import React from "react";
 import ArrayMethods from "./ArrayMethods";
-import Events from "./Events";
 
 const Body = (props) => {
   
@@ -13,7 +12,6 @@ const Body = (props) => {
         <p>My name is {children}.</p>
         <p>I am { permanent ? '' : 'currently'} a resident of {location}.</p>
         <ArrayMethods/>
-        <Events/>
       </div>
     )
   }
