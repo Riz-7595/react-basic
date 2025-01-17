@@ -1,35 +1,21 @@
-import Header from './components/Header';
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import PageA from "./pages/PageA";
+import PageB from "./pages/PageB";
+import PageC from "./pages/PageC";
+import NoPage from "./pages/NoPage";
 
 function App() {
 
-  const address = {
-    postalCode: 55150,
-    area: "SherShah Colony, Lahore",
-    permanent: false
-  }
-
-  class Person {
-    constructor(first, last = '')
-    {
-      this.firstName = first;
-      this.lastName = last;
-    }
-  }
-
-  class Student extends Person {
-    constructor(first, last='',degree)
-    {
-      super(first,last);
-      this.degreeName = degree;
-    }
-  }
-
-  const me = new Student('Rizwan','Khalid','COMSATS');
 
   return (
-    <div className='px-12 pt-12'>
-      <Header address={address} student={me} className='text-blue-500'/>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/A" element={<PageA/>}/>
+      <Route path="/B" element={<PageB/>}/>
+      <Route path="/C" element={<PageC/>}/>
+      <Route path="/*" element={<NoPage/>}/>
+    </Routes>
   );
 }
 
