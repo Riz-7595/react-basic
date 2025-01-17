@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import Counter from '../components/Counter';
+import { useSelector } from 'react-redux';
 
 const HomePage = () => {
+
+  const count = useSelector((state)=>state.counter.value)
 
   const [color, setColor] = useState("bg-gray-300")
 
@@ -39,9 +43,11 @@ const HomePage = () => {
       </nav>
       <Header address={address} student={me} className='text-blue-500'/>
       <div className='flex gap-1'>
-      <button onClick={()=>{setColor('bg-blue-300')}} className='bg-blue-300 rounded-xl px-4 py-4 mt-6'>Button A</button>
-      <button onClick={()=>{setColor('bg-red-300')}} className='bg-red-300 rounded-xl px-4 py-4 mt-6'>Button B</button>
+      <button onClick={()=>{setColor('bg-blue-300')}} className='bg-blue-300 rounded-xl p-4 mt-6'>Button A</button>
+      <button onClick={()=>{setColor('bg-red-300')}} className='bg-red-300 rounded-xl p-4 mt-6'>Button B</button>
       </div>
+      <Counter/>
+      <p>Counter: {count}</p>
     </div>
   );
 }
