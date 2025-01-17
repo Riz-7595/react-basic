@@ -10,11 +10,11 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage/>}/>
-      <Route path="/A" element={<PageA/>}/>
-      <Route path="/B" element={<PageB/>}/>
-      <Route path="/C" element={<PageC/>}/>
-      <Route path="/*" element={<NoPage/>}/>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/A" element={<PageA />} />
+      <Route path="/B" element={<PageB />} />
+      <Route path="/C" element={<PageC />} />
+      <Route path="/*" element={<NoPage />} />
     </Routes>
   );
 }
