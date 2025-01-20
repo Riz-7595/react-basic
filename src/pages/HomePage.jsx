@@ -52,6 +52,7 @@ const HomePage = () => {
   return (
     <div className='px-12 pt-12'>
       <nav className='flex justify-around text-5xl pb-6'>
+        <Link to='/weather' className={`px-8 py-4 rounded-xl ${color}`}>Weather</Link>
         <Link to='/A' className={`px-8 py-4 rounded-xl ${color}`}>A</Link>
         <Link to='/B' className={`px-8 py-4 rounded-xl ${color}`}>B</Link>
         <Link to='/C' className={`px-8 py-4 rounded-xl ${color}`}>C</Link>

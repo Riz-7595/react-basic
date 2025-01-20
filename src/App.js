@@ -4,6 +4,7 @@ import PageA from "./pages/PageA";
 import PageB from "./pages/PageB";
 import PageC from "./pages/PageC";
 import NoPage from "./pages/NoPage";
+import WeatherPage from "./pages/WeatherPage";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/B" element={<PageB />} />
       <Route path="/C" element={<PageC />} />
       <Route path="/*" element={<NoPage />} />
+      <Route path="/weather" element={<WeatherPage />}/>
     </Routes>
   );
 }
