@@ -64,10 +64,10 @@ const HomePage = () => {
       </div>
       <Counter />
       <p>Counter: {count}</p>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <input type="text" value={amount ? amount : ''} onChange={(e) => setAmount(e.target.value)} className='bg-orange-300 rounded-lg px-4 pb-1 w-32 mr-4' />
-        <button onClick={addAmount} className='mr-4'>Add</button>
-        <button onClick={subtractAmount}>Subtract</button>
+      <form onSubmit={(e) => e.preventDefault()} className='mt-4'>
+        <input type="text" value={amount ? amount : ''} onChange={(e) => setAmount(e.target.value)} className='bg-orange-300 rounded-lg px-4 pb-[2px] w-32 mr-4 caret-transparent' />
+        <button onClick={addAmount} className='mr-4 bg-green-300 rounded-lg px-4 py-2 hover:bg-green-400 active:bg-green-500'>Add</button>
+        <button onClick={subtractAmount} className='bg-red-300 rounded-lg px-4 py-2 hover:bg-red-400 active:bg-red-500'>Subtract</button>
       </form>
     </div>
   );
